@@ -5,7 +5,7 @@
  * Plugin Name:       Butchered URL Dropper
  * Plugin URI:        butchered-url-dropper
  * Description:       Dumps butchered, mutilated urls that attempt to load on Wordpress which would then be indexed inside Google Search Console.
- * Version:           1.1.0
+ * Version:           1.0.0
  * Author:            WalrusSoup
  * Author URI:        https://jaysonlindsley.dev
  * License:           MIT
@@ -18,9 +18,6 @@ if ( ! defined( 'WPINC' ) ) {
     die;
 }
 
-define( 'BUTCHERED_URL_PLUGIN_VERSION', '1.0.0' );
-
 require_once plugin_dir_path( __FILE__ ) . 'src/UrlVerifier.php';
-
 $urlVerifier = new UrlVerifier();
 $urlVerifier->initialize();
